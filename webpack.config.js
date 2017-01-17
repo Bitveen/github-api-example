@@ -42,14 +42,19 @@ module.exports = {
                 test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png$|\.jpe?g$|\.gif$/,
                 loader: 'file-loader'
             }
-
         ]
     },
     plugins: [
         new ExtractTextPlugin('style.css', {
             allChunks: true
         })
-    ]
+    ],
+    externals: {
+        'cheerio': 'window',
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
+    }
 
 
 
