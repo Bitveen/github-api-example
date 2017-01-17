@@ -13,7 +13,10 @@ module.exports = {
         path: __dirname + '/public'
     },
     resolve: {
-        alias: {},
+        root: __dirname + '/src',
+        alias: {
+            App: 'components/App.jsx'
+        },
         extensions: ['', '.js', '.jsx']
     },
     devtool: 'cheap-module-source-map',
