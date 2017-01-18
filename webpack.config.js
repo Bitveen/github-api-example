@@ -22,7 +22,9 @@ module.exports = {
             Profile: 'components/Profile.jsx',
             ProfileMain: 'components/ProfileMain.jsx',
             Routes: 'routes.jsx',
-            reducers: 'reducers.jsx'
+            reducers: 'reducers.jsx',
+            ActionsTypes: 'actionsTypes.jsx',
+            actions: 'actions.jsx'
         },
         extensions: ['', '.js', '.jsx']
     },
