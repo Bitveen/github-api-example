@@ -1,0 +1,7 @@
+.search-box {
+    @extend .panel;
+    @extend .panel-default;
+    &__body {
+        @extend .panel-body;
+    }
+}

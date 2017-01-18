@@ -5,17 +5,24 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        bundle: __dirname + '/src/index.jsx',
-        style: __dirname + '/src/style/main.scss'
+        bundle: path.join(__dirname, '/src/index.jsx'),
+        style: path.join(__dirname, '/src/style/main.scss')
     },
     output: {
         filename: '[name].js',
-        path: __dirname + '/public'
+        path: path.join(__dirname, '/public')
     },
     resolve: {
-        root: __dirname + '/src',
+        root: path.join(__dirname, '/src'),
         alias: {
-            App: 'components/App.jsx'
+            App: 'components/App.jsx',
+            SearchBox: 'components/SearchBox/SearchBox.jsx',
+            SearchForm: 'components/SearchBox/SearchForm.jsx',
+            SearchResults: 'components/SearchBox/SearchResults.jsx',
+            Profile: 'components/Profile.jsx',
+            ProfileMain: 'components/ProfileMain.jsx',
+            Routes: 'routes.jsx',
+            reducers: 'reducers.jsx'
         },
         extensions: ['', '.js', '.jsx']
     },
@@ -24,7 +31,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.jsx?$/,
-                include: __dirname + '/src',
+                include: path.join(__dirname, '/src'),
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'react', 'stage-0']

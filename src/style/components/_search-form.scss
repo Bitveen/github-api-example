@@ -1,0 +1,6 @@
+.search-form {
+    @extend .panel-heading;
+    &__input {
+        @extend .form-control;
+    }
+}
